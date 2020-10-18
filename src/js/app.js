@@ -1,4 +1,8 @@
 import Clock from "./clock";
+import Welcome from "./welcome";
+import TodoList from "./todoList";
+import Weather from "./weather";
+import RandomBackground from "./randomBackground";
 
 export default class App {
   state = {};
@@ -6,6 +10,13 @@ export default class App {
   constructor($target) {
     this.$target = $target;
     this.initTemplate();
+    this.initUserData();
+
+    this.clock = new Clock({ $target: this.$main });
+    this.welcome = new Welcome({ $target: this.$main });
+    this.todoList = new TodoList({ $target: this.$main });
+    this.weather = new Weather({ $target: this.$header });
+    this.randomBackground = new RandomBackground({ $target });
   }
 
   initTemplate() {
@@ -15,4 +26,6 @@ export default class App {
     this.$main = document.createElement("main");
     this.$target.append(this.$main);
   }
+
+  initUserData() {}
 }

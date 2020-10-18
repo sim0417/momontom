@@ -14,7 +14,7 @@ import ws from "gulp-webserver";
 const routes = {
   img: {
     src: "src/images/*",
-    dest: "build/img",
+    dest: "build/images",
   },
   html: {
     watch: "src/*.html",
