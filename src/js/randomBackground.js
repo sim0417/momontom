@@ -1,4 +1,4 @@
-const IMG_PATH = "../images";
+const IMG_PATH = "./images";
 const ARRAY_IMG = ["image_1.jpg", "image_2.jpg", "image_3.jpg", "image_4.jpg"];
 
 export default class RandomBackground {

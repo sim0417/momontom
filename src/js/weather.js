@@ -56,9 +56,13 @@ export default class weather {
           weatherIconUrl = `${ICON_URL}${iconId}.png`;
         }
 
-        weather.innerHTML = `
-        <img src="${weatherIconUrl}">
-        <span>${temp}℃ @ ${place}</span>`;
+        if (temp && place) {
+          weather.innerHTML = `
+          <img src="${weatherIconUrl}">
+          <span>${temp}℃ @ ${place}</span>`;
+        } else {
+          weather.innerHTML = null;
+        }
       });
   };
 }
